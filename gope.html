@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiny-Hugs</title>
+<link rel="stylesheet" href="gope.css">
+<script src="gope.js"> </script>
+</head>
+<body>
+  <div class="container">
+    <h1 id="promt">Hi! What's your name? </h1>
+
+    <input id="nameInput" type="text" placeholder="Type your name here">
+    <button onclick="saveName()">Continue</button>
+
+    <h2 id="greet" class="greet"></h2>
+
+    <div id="secret" class="box"></div>
+
+    <select id="picker" onchange="showComfort()" style="display:none;">
+      <option value="">Choose one</option>
+      <option value="talk">Someone to Talk </option>
+      <option value="quote">Motivational Quote </option>
+      <option value="song">Random Song </option>
+      <option value="todo">Something to Do </option>
+    </select>
+
+    <div id="output" class="box"></div>
+    <audio id="audioPlayer" controls></audio>
+
+    <div class="button-row">
+      <button id="backBtn" onclick="goBack()" style="display:none;"> Back</button>
+      <button id="restartBtn" onclick="restartPage()" style="display:none;"> Restart</button>
+    </div>
+
+    <div id="spinWheelSection"
+    style="display: none;">
+        <p>Enter 2–5 people you can talk to.
+        Think of the ones who make things feel less heavy. Separated by commas:</p>
+    <input id="spinInput" type="text" placeholder="">
+    <button id="spinBtn" onclick="spinTheWheel()">Spin</button> 
+
+    <div id="wheelContainer" style="position: relative; width: 300px; height: 300px; margin-top: 20px;">
+        <canvas id="wheel" width="300" height="300"></canvas>
+        <div id="pointer" style="position:absolute; top: 0; left: 50%; transform: translateX(-50); width: 4px; height: 20px; background: red;"></div>
+    </div>
+   </div>
+  </div>
+</body>
